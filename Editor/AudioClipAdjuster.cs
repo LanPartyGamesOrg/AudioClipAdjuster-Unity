@@ -81,6 +81,10 @@ namespace AudioClipAdjuster.Editor {
             tempoSlider = root.Query<Slider>("TempoSlider").First();
             clipsText = root.Query<Label>("Clips").First();
 
+            volumeSlider.value = 1;
+            pitchSlider.value = 1;
+            tempoSlider.value = 1;
+            
             SetupEditorPrefField("PathField", () => executablePath, value => executablePath = value);
             SetupEditorPrefField("ArgumentField", () => argumentString, value => argumentString = value);
             SetupEditorPrefField("AdvancedArgumentField", () => advancedArgString, value => advancedArgString = value);

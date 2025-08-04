@@ -1,6 +1,6 @@
 {
   "name": "com.adamgryu.audioclipadjuster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Audio Clip Adjuster",
   "description": "A quick little tool to adjust sound clips directly in Unity.",
   "unity": "2021.3",

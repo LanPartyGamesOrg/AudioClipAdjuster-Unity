@@ -131,7 +131,10 @@ namespace AudioClipAdjuster.Editor {
 
             bool notAdvanced = Mathf.Approximately(pitchSlider.value, 1) && Mathf.Approximately(tempoSlider.value, 1);
             string argStr = notAdvanced ? argumentString : advancedArgString;
-            startInfo.Arguments = string.Format(argStr, tempPath, originPath, volumeSlider.value, pitchSlider.value, tempoSlider.value);
+            startInfo.Arguments = string.Format(argStr, tempPath, originPath, 
+                                                volumeSlider.value.ToString(System.Globalization.CultureInfo.InvariantCulture), 
+                                                pitchSlider.value.ToString(System.Globalization.CultureInfo.InvariantCulture), 
+                                                tempoSlider.value.ToString(System.Globalization.CultureInfo.InvariantCulture));
 
             // Launch process.
             var command = executablePath + " " + startInfo.Arguments;
